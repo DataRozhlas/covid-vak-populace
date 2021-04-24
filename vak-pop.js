@@ -110,6 +110,7 @@
             pointWidth: 12,
             borderWidth: 1,
             borderRadius: 0,
+            animation: false,
           },
         },
         series: [
