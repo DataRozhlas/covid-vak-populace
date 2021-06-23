@@ -38,6 +38,9 @@
         dat.push([group, tmp[group]]);
       });
 
+      dat.push(['80+', tmp['80+']]); // wtf
+      dat.push(['0-17', tmp['0-17']]);
+
       dat.sort((a, b) => {
         if (a[0] < b[0]) { return -1; }
         if (a[0] > b[0]) { return 1; }
@@ -51,6 +54,7 @@
           pop[row[0]] - row[1],
         ]);
       });
+
       dat.shift();
       dat.pop();
       datLeft.shift();
@@ -96,7 +100,7 @@
           backgroundColor: '#ffffffee',
           headerFormat: '<span style="font-size:0.8rem"><b>Věk {point.key}</b></span><table>',
           pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>'
-                          + '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+            + '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
           footerFormat: '</table>',
           shared: true,
           useHTML: true,
