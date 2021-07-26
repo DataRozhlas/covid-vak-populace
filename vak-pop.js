@@ -16,10 +16,6 @@
     '0-17': 2018609,
   };
 
-  function parseD(str) {
-
-  };
-
   fetch('https://data.irozhlas.cz/covid-uzis/vak_vek_prvni.json')
     .then((response) => response.json())
     .then((data) => {
